@@ -1,9 +1,10 @@
 import javax.swing.JFrame;
 
 public class MainFrame extends JFrame {
-    public void init() {
-        setTitle("HelloTest");
+    public MainFrame(String title) {
+        super();
+        setTitle(title);
         setVisible(true);
-        setSize(800, 600);
+        setSize(400, 600);
     }
 }
