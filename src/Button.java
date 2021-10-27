@@ -1,5 +1,8 @@
-public class Button {
-    public void test() {
-        System.out.println("Hello from the world, this is a Button!");
+import javax.swing.JButton;
+
+public class Button extends JButton {
+    public Button(String btnTxt) {
+        super();
+        setText(btnTxt);
     }
 }
