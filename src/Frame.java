@@ -1,7 +1,7 @@
 import javax.swing.JFrame;
 
-public class MainFrame extends JFrame {
-    public MainFrame(String title) {
+public class Frame extends JFrame {
+   public Frame(String title) {
         super();
         setTitle(title);
         setVisible(true);
