@@ -1,18 +1,22 @@
-import java.awt.Color;
+import java.awt.BorderLayout;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        //frame
-        Frame mainFrame = new Frame("JCalc");
-        //panel
-        Panel mainPanel = new Panel(Color.GRAY);
-        //buttons
-        Button helloButton = new Button("Hello", 200, 200);
-
-        helloButton.setBounds(50,100,80,30);
-        helloButton.setBackground(Color.CYAN);
-        mainPanel.add(helloButton);
-        mainFrame.add(mainPanel);
-        mainFrame.setLayout(null);
+        // frame
+        Frame frame = new Frame("JCalc");
+        // panel
+        Panel panel = new Panel();
+        // calculator screen
+        Screen screen = new Screen();
+        // grid manager
+        GridManager gridManager = new GridManager();
+        // adding manager to panel
+        panel.setLayout(gridManager);
+        // adding panel to frame
+        frame.add(panel);
+        // add screen to frame
+        frame.add(screen, BorderLayout.NORTH);
+        // adding list of buttons to panel 
+        panel.addButtonsFromListOfStrings(ButtonsData.getButtonTittles());
     }
 }
