@@ -3,8 +3,14 @@ import javax.swing.JPanel;
 
 public class Panel extends JPanel {
   public Panel(Color bgColor) {
+        setBackground(bgColor);
+   }
+   public Panel() {
         super();
-        setBounds(40,80,200,200);
-        setBackground(Color.BLACK);
+   }
+   public void addButtonsFromListOfStrings(String[] tittleList) {
+      for (String tittle : tittleList) {
+          add(new Button(tittle));
+      }
    }
 }
