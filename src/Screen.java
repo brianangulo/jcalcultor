@@ -4,16 +4,21 @@ import java.awt.*;
 
 public class Screen extends JPanel {
     // state
-    private final JLabel content = new JLabel();
+    private static final JLabel content = new JLabel("");
     // constructor
     public Screen() {
        setBackground(Color.LIGHT_GRAY);
    }
-   public JLabel getContent() {
-       return content;
+   public static String getTextContent() {
+       return content.getText();
    }
-   public void setContent(String newContent) {
+   public static void setContent(String newContent) {
         content.setText(newContent);
    }
-
+    /**
+     * Wrapper for instanced version of add
+     */
+    public void addContentToScreen() {
+        add(content);
+    }
 }
