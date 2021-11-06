@@ -1,13 +1,15 @@
 import java.awt.BorderLayout;
 
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         // frame
         Frame frame = new Frame("JCalc");
         // panel
         Panel panel = new Panel();
         // calculator screen
         Screen screen = new Screen();
+         screen.setContent("000");
+         screen.add(screen.getContent());
         // grid manager
         GridManager gridManager = new GridManager();
         // adding manager to panel
@@ -18,5 +20,6 @@ public class App {
         frame.add(screen, BorderLayout.NORTH);
         // adding list of buttons to panel 
         panel.addButtonsFromListOfStrings(ButtonsData.getButtonTittles());
+        
     }
 }
